@@ -1,0 +1,25 @@
+.invoice-container {
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .invoice-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .invoice-item {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  

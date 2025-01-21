@@ -1,0 +1,17 @@
+<div class="customer-container">
+    <h1>Customers</h1>
+  
+    <form (ngSubmit)="addCustomer()" class="customer-form">
+      <input [(ngModel)]="newCustomer.name" placeholder="Customer Name" name="name" required />
+      <input [(ngModel)]="newCustomer.email" placeholder="Customer Email" name="email" type="email" required />
+      <button type="submit">Add Customer</button>
+    </form>
+  
+    <ul class="customer-list">
+      <li *ngFor="let customer of customers" class="customer-item">
+        <span>{{ customer.name }} - {{ customer.email }}</span>
+        <button (click)="deleteCustomer(customer.id)" class="delete-button">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

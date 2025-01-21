@@ -1,0 +1,19 @@
+<div class="item-container">
+    <h1>Items</h1>
+  
+    <form (ngSubmit)="addItem()" class="item-form">
+      <input [(ngModel)]="newItem.name" placeholder="Item Name" name="name" required />
+      <input [(ngModel)]="newItem.category" placeholder="Category" name="category" required />
+      <input [(ngModel)]="newItem.quantity" placeholder="Quantity" name="quantity" type="number" required />
+      <input [(ngModel)]="newItem.price" placeholder="Price" name="price" type="number" required />
+      <button type="submit">Add Item</button>
+    </form>
+  
+    <ul class="item-list">
+      <li *ngFor="let item of items" class="item-item">
+        <span>{{ item.name }} ({{ item.category }}) - Quantity: {{ item.quantity }} - Price: ${{ item.price }}</span>
+        <button (click)="deleteItem(item.id)" class="delete-button">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

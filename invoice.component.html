@@ -1,0 +1,11 @@
+<div class="invoice-container">
+    <h1>Invoices</h1>
+  
+    <ul class="invoice-list">
+      <li *ngFor="let invoice of invoices" class="invoice-item">
+        <span>Invoice ID: {{ invoice.id }} - Total Amount: ${{ invoice.totalAmount }}</span>
+        <span>Date: {{ invoice.invoiceDate }}</span>
+      </li>
+    </ul>
+  </div>
+  

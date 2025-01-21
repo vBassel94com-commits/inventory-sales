@@ -1,0 +1,17 @@
+<div class="branch-container">
+    <h1>Branches</h1>
+  
+    <form (ngSubmit)="addBranch()" class="branch-form">
+      <input [(ngModel)]="newBranch.name" placeholder="Branch Name" name="name" required />
+      <input [(ngModel)]="newBranch.location" placeholder="Branch Location" name="location" required />
+      <button type="submit">Add Branch</button>
+    </form>
+  
+    <ul class="branch-list">
+      <li *ngFor="let branch of branches" class="branch-item">
+        <span>{{ branch.name }} - {{ branch.location }}</span>
+        <button (click)="deleteBranch(branch.id)" class="delete-button">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
